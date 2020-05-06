@@ -7,8 +7,8 @@ let users = [
     {name: "Pete", age: 18, surname: "Peterson"},
     {name: "Ann", age: 19, surname: "Hathaway"}
 ];
-'name' |> byField |> users.sort;
+users.sort(byField('name'));
 users.forEach(user => alert(user.name)); // Ann, John, Pete
 
-'age' |> byField |> users.sort;
+users.sort(byField('age'));
 users.forEach(user => alert(user.name)); // Pete, Ann, John
